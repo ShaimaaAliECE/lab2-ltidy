@@ -1,0 +1,94 @@
+.App {
+  text-align: center;
+}
+
+/*game title header*/
+.App-header {
+  background-color: #000205;
+  height: 50px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+/*the displayed board is where game is*/ 
+.Game {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/*buttons to start the game*/
+button {
+    background-color: #0d47a3;
+    border: 1px solid #0d47a3;
+    border-radius: 3px;
+    display: inline-block;
+    color: #FFF;
+    font-size: 12pt;
+    padding: 7px 28px;
+    text-decoration: none;
+    margin: 5px;
+    transition: all 0.5s;
+    max-width: 160px;
+    min-width: 160px;
+}
+
+/*hovering over a button changes the colour*/
+button:hover {
+    background-color: rgb(47, 143, 233);
+}
+
+.Board {
+  display: flex;
+}
+
+.Column {
+}
+
+/*space are where the player can choose where to put their token*/ 
+.Space {
+  padding: 8px;
+  min-width: 30px;
+  min-height: 30px;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+/*animate player token when move is made*/
+.Space div {
+  position: relative;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 15px;
+  top: -400px;
+  transition: transform 0.5s;
+}
+
+/*player one red*/
+.Red {
+  background-color: #ec0c3c;
+  transform: translateY(400px);
+}
+
+/*player two yellow*/
+.Yellow {
+  background-color: #f3ef04e0;
+  transform: translateY(400px);
+}
+
+/*the winner message is usually blank*/ 
+.winnerMessage {
+  margin: 20px;
+  font-size: 0pt;
+  font: 12pt;
+  opacity: 0;
+}
+
+/*player wins so the message appears*/ 
+.appear {
+  opacity: 1;
+  font-size: 20pt;
+}
